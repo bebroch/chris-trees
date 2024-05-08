@@ -3,7 +3,7 @@ import Button from './button'
 
 function Header() {
     return (
-        <div className="bg-yellow-600 m-3 px-5 py-2 rounded-lg container mx-auto">
+        <div className="bg-yellow-600 mt-3 px-5 py-2 rounded-lg container mx-auto shadow-lg">
             <div className="flex justify-between items-center md:flex-none">
                 <div className="flex justify-start items-center">
                     <Logo />

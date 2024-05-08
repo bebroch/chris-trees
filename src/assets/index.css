@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Poetsen-One';
+    src: local('Poetsen-One'), url('./fonts/PoetsenOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Romana-Bold';
+    src: local('Romana-Bold'), url('./fonts/Ramona-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Romana-Light';
+    src: local('Romana-Light'), url('./fonts/Ramona-Light.ttf') format('truetype');
+}

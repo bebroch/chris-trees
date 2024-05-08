@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+    content: ['./src/**/*.{js,ts,jsx,tsx}'],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                poetsen: ['Poetsen-One'],
+                romanaBold: ['Romana-Bold'],
+                romanaLight: ['Romana-Light'],
+            },
+        },
     },
     plugins: [],
 }
