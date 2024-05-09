@@ -1,12 +1,12 @@
 import axios from 'axios'
+import { API_URL, blankResponseJsonDB } from '../../../../data/data'
 import { ResponseJsonDB } from '../types'
-import { blankResponseJsonDB } from './data'
 
 export class ApiService {
     static async get(): Promise<ResponseJsonDB> {
         let data: ResponseJsonDB
         try {
-            data = (await axios.get<ResponseJsonDB>('https://camel-gaia.json.so/db')).data
+            data = (await axios.get<ResponseJsonDB>(API_URL)).data
         } catch (err) {
             data = blankResponseJsonDB
         }

@@ -1,4 +1,6 @@
-import { ResponseJsonDB } from '../types'
+import { ResponseJsonDB } from '../src/body/right-container/types'
+
+export const API_URL = 'https://camel-gaia.json.so/db'
 
 export const blankResponseJsonDB: ResponseJsonDB = {
     db: {
