@@ -9,7 +9,7 @@ function SideBar({ onClickCloseButton }: { onClickCloseButton?: () => void }) {
                 <div className="flex justify-between items-center">
                     <Logo />
                     <div className="py-2 px-3">
-                        <label onClick={onClickCloseButton} className="text-5xl text-white">
+                        <label onClick={onClickCloseButton} className="text-4xl text-white">
                             ✕
                         </label>
                     </div>

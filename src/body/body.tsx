@@ -14,10 +14,7 @@ function SideBar({ onClickCloseButton }: { onClickCloseButton?: () => void }) {
     return (
         <div className="fixed bg-yellow-400 top-0 left-0 h-full w-full">
             <div className="flex justify-end w-full">
-                <div
-                    onClick={onClickCloseButton}
-                    className="bg-blue-500 py-1 px-3 rounded-full mt-6 mr-6"
-                >
+                <div onClick={onClickCloseButton} className="py-1 px-3 rounded-full mt-6 mr-6">
                     <label className="text-4xl text-white">✕</label>
                 </div>
             </div>
