@@ -1,5 +1,5 @@
 import RightContainer from './right-container/right-container'
-import LeftContainer from './left-container/left-container'
+import LeftContainer, { FilterPanel } from './left-container/left-container'
 import { useState } from 'react'
 
 function FiltersButton({ onClick }: { onClick?: () => void }) {
@@ -12,14 +12,17 @@ function FiltersButton({ onClick }: { onClick?: () => void }) {
 
 function SideBar({ onClickCloseButton }: { onClickCloseButton?: () => void }) {
     return (
-        <div className="fixed  bg-blue-300 top-0 left-0 h-full w-full">
+        <div className="fixed bg-yellow-400 top-0 left-0 h-full w-full">
             <div className="flex justify-end w-full">
-                <label onClick={onClickCloseButton} className="text-5xl m-6 text-white">
-                    X
-                </label>
+                <div
+                    onClick={onClickCloseButton}
+                    className="bg-blue-500 py-1 px-3 rounded-full mt-6 mr-6"
+                >
+                    <label className="text-4xl text-white">✕</label>
+                </div>
             </div>
 
-            <div className="p-6 grid grid-cols-1 w-full gap-4"></div>
+            <FilterPanel />
         </div>
     )
 }

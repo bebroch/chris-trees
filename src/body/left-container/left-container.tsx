@@ -40,7 +40,7 @@ function RangeSearcher({ value }: { value: string }) {
                     type="number"
                     min="0"
                     step="1"
-                    placeholder="от"
+                    placeholder="до"
                 />
             </div>
         </div>
@@ -51,35 +51,41 @@ function Button() {
     return <button className="rounded-lg text-white bg-yellow-600 p-2">Показать</button>
 }
 
+export function FilterPanel() {
+    return (
+        <div className="p-6 grid grid-cols-1 w-full gap-4">
+            <Searcher value="Поиск" />
+
+            <FilterSearcher value="Цвет">
+                {Object.entries(Color).map(([colorKey, colorValue]) => (
+                    <option value={colorKey}>{colorValue}</option>
+                ))}
+            </FilterSearcher>
+
+            <FilterSearcher value="Материал">
+                {Object.entries(Material).map(([materialKey, materialValue]) => (
+                    <option value={materialKey}>{materialValue}</option>
+                ))}
+            </FilterSearcher>
+
+            <FilterSearcher value="В наличии">
+                {Object.entries({ yes: 'Да', not: 'Нет', yesAll: 'Все' }).map(
+                    ([inStockKey, inStockValue]) => (
+                        <option value={inStockKey}>{inStockValue}</option>
+                    )
+                )}
+            </FilterSearcher>
+
+            <RangeSearcher value="Цена" />
+            <Button />
+        </div>
+    )
+}
+
 function LeftContainer() {
     return (
         <div className="bg-yellow-400 rounded-lg col-span-1 shadow-lg h-min">
-            <div className="p-6 grid grid-cols-1 w-full gap-4">
-                <Searcher value="Поиск" />
-
-                <FilterSearcher value="Цвет">
-                    {Object.entries(Color).map(([colorKey, colorValue]) => (
-                        <option value={colorKey}>{colorValue}</option>
-                    ))}
-                </FilterSearcher>
-
-                <FilterSearcher value="Материал">
-                    {Object.entries(Material).map(([materialKey, materialValue]) => (
-                        <option value={materialKey}>{materialValue}</option>
-                    ))}
-                </FilterSearcher>
-
-                <FilterSearcher value="В наличии">
-                    {Object.entries({ yes: 'Да', not: 'Нет', yesAll: 'Все' }).map(
-                        ([inStockKey, inStockValue]) => (
-                            <option value={inStockKey}>{inStockValue}</option>
-                        )
-                    )}
-                </FilterSearcher>
-
-                <RangeSearcher value="Цена" />
-                <Button />
-            </div>
+            <FilterPanel />
         </div>
     )
 }
