@@ -7,6 +7,12 @@ export default {
                 poetsen: ['Poetsen-One'],
                 romanaBold: ['Romana-Bold'],
                 romanaLight: ['Romana-Light'],
+
+                crooker: ['Crooker'],
+                druzhok: ['DRUZHOK'],
+                waffleSlab: ['Waffle Slab'],
+                waffleSoft: ['Waffle Soft'],
+                zametkaParletter: ['Zametka Parletter'],
             },
         },
     },

@@ -16,3 +16,30 @@
     font-family: 'Romana-Light';
     src: local('Romana-Light'), url('./fonts/Ramona-Light.ttf') format('truetype');
 }
+
+/*  */
+
+@font-face {
+    font-family: 'Crooker';
+    src: local('Crooker'), url('./fonts/crooker.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'DRUZHOK';
+    src: local('DRUZHOK'), url('./fonts/DRUZHOK.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Waffle Slab';
+    src: local('Waffle Slab'), url('./fonts/MADE Waffle Slab PERSONAL USE.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Waffle Soft';
+    src: local('Waffle Soft'), url('./fonts/MADE Waffle Soft PERSONAL USE.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Zametka Parletter';
+    src: local('Zametka Parletter'), url('./fonts/Zametka_Parletter.otf') format('opentype');
+}
