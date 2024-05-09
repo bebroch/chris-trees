@@ -23,7 +23,7 @@ function RightContainer() {
     }, [])
 
     return (
-        <div className="bg-blue-100 rounded-lg col-span-3 h-full shadow-lg">
+        <div className="bg-blue-100 rounded-lg col-span-4 h-full shadow-lg">
             {items.length ? <Cards items={items} /> : <Loading />}
         </div>
     )
